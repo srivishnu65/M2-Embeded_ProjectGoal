@@ -1,24 +1,12 @@
-The compare match interrupt routine we count-up the variable hdseconds, seconds, minutes, and hours as shown on this following C code:
-ISR(TIMER1_COMPA_vect)
-{
-  // Increase the Hundred Seconds
-  hdseconds++;            // Count-up Hundredth of Seconds
-  disp_digit(1,hdseconds,99);
-  if (hdseconds > 99) {      
-    hdseconds=0;
-    seconds++;            // Count-up Seconds
-    disp_digit(3,seconds,59);
-    if (seconds > 59) {
-      seconds=0;
-      minutes++;          // Count-up Minutes
-      disp_digit(5,minutes,59);
-      if (minutes > 59) {
-        minutes=0;
-     hours++;          // Count-up Hours
-     disp_digit(7,hours,23);
-     if (hours > 23) hours=0;
-      }
-    }
-  }  
-  TCNT1=0;                // Reset TIMER1 Counter
-}
+The following C code is the setup for the AVR ATmega328P TIMER1:
+// Initial 16-bit TIMER1
+// TCNT1 Counter Increment Period: 1 / (Fclk/8)
+// Period = 1 / (16000000/8) = 0.0000005 Seconds
+// For 10 millisecond: 20,000 x 0.0000005 = 0.01 Seconds
+TCCR1A=0; // Normal Mode
+TCCR1B=(1<<CS11); // Use prescaler of 8
+TCNT1=0; // Start TIMER1 counter from 0 
+OCR1A=20000; // The Hundredth Second
+
+TIFR1=(1<<OCF1A); // Clear any pending Compare A Interrupt
+TIMSK1=0; // Disable Compare A Interrupt
