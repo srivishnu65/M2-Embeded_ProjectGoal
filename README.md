@@ -1,1 +1,1 @@
-# M2_Embeded_ProjectGoal
+# Building stopwatch using Atmega328 and Maxim MAX7219 chip
