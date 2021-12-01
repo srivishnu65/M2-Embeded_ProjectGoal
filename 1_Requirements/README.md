@@ -32,3 +32,27 @@ Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxi
 - User Friendly
 - Modular Approach
 - Low cost and Robust system.
+## Threats
+1. Cannot use stop watch for longtime.
+
+# 4W's and 1 H's
+## Why:
+1. To record the exact time of submittion.
+2. It can be used at one place.
+
+## Where:
+1. This can be used in sports,home.
+2. We can use it in the  Industries, Shopping Malls etc.
+
+## Who:
+1. This Device can be used by anyone, It is easy to use .
+
+## When:
+1. This project is used for recording time in sports.
+
+## How:
+1.Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxim MAX7219 chip is used. The AVR ATmega328P SPI peripheral will be configured as a master and Maxim MAX7219 as the SPI device slave.
+
+
+
+
