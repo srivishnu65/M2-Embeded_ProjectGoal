@@ -45,13 +45,13 @@ Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxi
 2. We can use it in the  Industries, Shopping Malls etc.
 
 ## Who:
-1. This Device can be used by anyone, It is easy to use .
+ This Device can be used by anyone, It is easy to use .
 
 ## When:
-1. This project is used for recording time in sports.
+ This project is used for recording time in sports.
 
 ## How:
-1.Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxim MAX7219 chip is used. The AVR ATmega328P SPI peripheral will be configured as a master and Maxim MAX7219 as the SPI device slave.
+ Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxim MAX7219 chip is used. The AVR ATmega328P SPI peripheral will be configured as a master and Maxim MAX7219 as the SPI device slave.
 
 
 
