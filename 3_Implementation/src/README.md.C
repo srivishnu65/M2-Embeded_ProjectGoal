@@ -1,4 +1,4 @@
-the
+the compare match interrupt routine we count-up the variable hdseconds, seconds, minutes, and hours as shown on this following C code:
 ISR(TIMER1_COMPA_vect)
 {
   // Increase the Hundred Seconds
