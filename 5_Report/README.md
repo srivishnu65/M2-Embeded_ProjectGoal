@@ -31,3 +31,22 @@ The stopwatch project that build has these following features:
 
 # The Maxim MAX7219
 The MAX7219 chip from maxim is a powerful serial input/output common-cathode display driver that interfaces microcontroller to 7-segment numeric LED displays of up to 8 digits. It has a build-in BCD (binary code decimal) decoder and a brightness control. Although the main function is to drive the 8-Digits seven segment LED display but because it also capable to drive an individual LED segment i.e. segment A to segment G and DP (decimal point), therefore you could also use this chip to drive the individual LED, the LED bar-graph, or the 8×8 LED matrix display. The MAX7219 could easily be daisy-chained (cascaded) to another MAX7219 chip using the DOUT pin which is useful when you want to drive 16-Digits LED display or several LED matrix display.
+![image](https://user-images.githubusercontent.com/94337426/144263154-2118805d-7b43-4b3e-975a-6769706c0674.png)
+# The AVR ATmega328P TIMER1 Peripheral
+The 16-bits TIMER1 peripheral is the heart beat of this stopwatch project. We used this 16-bit TIMER1 as it give more flexibility to implement the stopwatch, because of the 16-bit counter length, therefore it could counting up to 65.536 before overflow. We will use TIMER1 16-bit output compare register OCR1A  as the base of our hundredth of seconds counter.
+![Diagram A](https://user-images.githubusercontent.com/94337426/144263530-896bc14a-0d9e-4dc9-a532-a9e58cb522c7.jpg)
+
+The Output Compare Register A (OCR1A) will be the maximum value of TCNT1 register counter before it generate an interrupt. Using the AVRJazz 28PIN development board 16 Mhz external crystal resonator with prescaler of 8, we could calculate the TIMER1 clock period as follow:
+
+TIMER1 Clock Period = 1 / (16000000 / 8) = 0.0000005 seconds
+
+To get a hundredth of seconds period, the TIMER1 digital counter TCNT1 register will need to count up to value of 20,000:
+
+The hundredth of seconds = 20000 x 0.0000005 seconds = 0.01 seconds.
+
+By assigning this value to the OCR1A register and activate the output compare register A interrupt, the compare match interrupt will be generated every 0.01 seconds.
+# The AVR ATmega328P External Interrupt
+![Diagram a e](https://user-images.githubusercontent.com/94337426/144264214-108af777-95f5-4d0a-b991-c401febde066.jpg)
+# Result
+
+Hence,Stop watch is bulid with Atmega328 and The Maxim MAX7219
