@@ -1,3 +1,4 @@
+The following C code is the setup for the AVR ATmega328P TIMER1:
 / Initial 16-bit TIMER1
 // TCNT1 Counter Increment Period: 1 / (Fclk/8)
 // Period = 1 / (16000000/8) = 0.0000005 Seconds
