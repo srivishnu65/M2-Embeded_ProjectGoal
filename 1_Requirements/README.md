@@ -15,6 +15,16 @@ Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxi
 5. AVRJazz 28PIN development board from ermicro which is based on the AVR ATmega328P microcontroller.
 6. Atmel AVR ATmega328 and Maxim MAX7219 Datasheet
 
+## Features
+- Stopwatch counting up to hundredth of second when the SW1 is pressed
+- Pressing the SW1 once will freeze the counting display while continuing counting in the background, pressing the SW1  again will continue to display the stopwatch counting
+-Adjust the intensity of the 8-Digits seven segment LED display using the trimmer potentiometer (TP).
+-Reset the stopwatch counting by pressing the SW0.
+-  
+- 
+- 
+
+
 # Software Used
 1. SimulIDE
 2. Visual Studio
