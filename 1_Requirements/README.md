@@ -53,6 +53,23 @@ Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxi
 ## How:
  Atmel AVR ATMega328P microcontroller SPI peripheral to communicate with the Maxim MAX7219 chip is used. The AVR ATmega328P SPI peripheral will be configured as a master and Maxim MAX7219 as the SPI device slave.
 
+## Detail requirements
+### High Level Requirements
+| High Level Requirements      | Description |
+| ----------- | ----------- |
+| HLR1      |  Maxim MAX7219: Serially Interfaced, 8-Digit LED Display Drivers  |
+| HLR2   | Two common cathode 4-Digits seven segment LED display|
+| HLR3   |AVRJazz 28PIN development board from ermicro which is based on the AVR ATmega328P microcontroller|
+| HLR4   | Display|
+| HLR5   | Software used|
 
-
+### Low Level Requirements
+| Low Level Requirements      | Description |
+| ----------- | ----------- |
+| LLR1      | ATmega328     |
+| LLR2   |  AVR ATmega328P 16-bit TIMER2||
+| LLR3   | ADC peripheral|
+| LLR4   |Atmel AVR ATmega328 and Maxim MAX7219 Datasheet|
+| LLR5   | Resistor |
+| LLR6  |  Capacitors |
 
