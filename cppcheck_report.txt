@@ -1,0 +1,11 @@
+3_Implementation/main.c:107:15: style: The scope of the variable 'ADCRead' can be reduced. [variableScope]
+  uint8_t cnt,ADCRead;
+              ^
+3_Implementation/src/README.md.C:1:35: error: syntax error [syntaxError]
+The following C code is the setup for the AVR ATmega328P TIMER1:
+                                  ^
+3_Implementation/src/README.md.c:4:1: error: Unmatched '{'. Configuration: ''. [syntaxError]
+{
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
